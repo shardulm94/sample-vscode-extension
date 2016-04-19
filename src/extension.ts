@@ -17,7 +17,7 @@ export function activate(context: vscode.ExtensionContext) {
         let msg: string = "onDidChangeTextEditorSelection called =>\n";
         msg += "file: " + ((e.textEditor.document) ? e.textEditor.document.fileName : "undefined") + "\n";
         msg += "line count: " + e.textEditor.document.lineCount + " ";
-        msg += "selection: Ln " + (e.selections[0].active.line+1) + ", Col " + e.selections[0].active.character + "\n";
+        msg += "selection: Ln " + (e.selections[0].active.line+1) + ", Col " + (e.selections[0].active.character+1) + "\n";
         msg += "\n";
         console.log(msg);
     });
